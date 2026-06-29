@@ -1,0 +1,17 @@
+package com.example.lab4.dto.response;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Відповідь із даними будівлі")
+public class BuildingResponseDto {
+    @Schema(description = "Ідентифікатор будівлі", example = "1")
+    private Long id;
+    @Schema(description = "Назва будівлі", example = "Business Center Alpha")
+    private String name;
+    @Schema(description = "Місто", example = "Odesa")
+    private String city;
+    @Schema(description = "Адреса", example = "Shevchenko Avenue 10")
+    private String address;
+    public BuildingResponseDto(Long id, String name, String city, String address) { this.id=id; this.name=name; this.city=city; this.address=address; }
+    public Long getId(){return id;} public String getName(){return name;} public String getCity(){return city;} public String getAddress(){return address;}
+}
